@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+    <img src="../assets/images/logo.png" routerLink='/admin'>
+    <div fxLayout="row" fxLayoutAlign="center center">
+
+        <span>{{userName}} ({{role}})</span>
+        <button mat-button [matMenuTriggerFor]="menu">
+                <mat-icon mat-list-icon>person </mat-icon>
+                <mat-icon mat-list-icon>keyboard_arrow_down</mat-icon>
+            </button>
+        <mat-menu #menu="matMenu">
+            <div fxLayout="row" fxLayoutAlign="center center" style="padding-top: 0.43em;">
+                <button mat-stroked-button (click)="logout()">Logout</button>
+            </div>
+        </mat-menu>
+    </div>
+
+</mat-toolbar>

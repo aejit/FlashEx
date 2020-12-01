@@ -1,0 +1,253 @@
+version: '3'
+services:
+  discovery-server:
+    build: common-ms/discovery-server
+    image: discovery-server:latest
+    expose:
+      - 8761
+    ports:
+      - 8761:8761
+    env_file:
+      - ./env-files/local/common.env
+
+  config-server:
+    build: common-ms/config-server
+    image: config-server:latest
+    expose:
+      - 8888
+    ports:
+      - 8888:8888
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - discovery-server
+
+  gateway:
+    build: common-ms/gateway
+    image: gateway:latest
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+
+  flashex-webapp:
+    build: common-ms/flashex-webapp
+    image: flashex-webapp:latest
+    expose:
+      - 4200
+    ports:
+      - 4200:4200
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  user-ms:
+    build: user-ms
+    image: user-ms:latest
+    expose:
+      - 6000
+    ports:
+      - 6000:6000
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  shipment-loadbalancer:
+    build:
+      context: ./shipment-ms
+      dockerfile: Dockerfile_loadbalancer
+    image: shipment-loadbalancer:latest
+    expose:
+      - 7010
+    ports:
+      - 7010:7010
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  shipment-webservice:
+    build:
+      context: ./shipment-ms
+      dockerfile: Dockerfile_webservice
+    image: shipment-webservice:latest
+    expose:
+      - 6010
+    restart: always
+    ports:
+      - 6010:6010
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  order-workerservice:
+    build:
+      context: ./shipment-ms
+      dockerfile: Dockerfile_order_workerservice
+    image: order-workerservice:latest
+    expose:
+      - 5010
+    ports:
+      - 5010:5010
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  order-tracking-workerservice:
+    build:
+      context: ./shipment-ms
+      dockerfile: Dockerfile_order_tracking_workerservice
+    image: order-tracking-workerservice:latest
+    expose:
+      - 5060
+    ports:
+      - 5060:5060
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  shipment-workerservice:
+    build:
+      context: ./shipment-ms
+      dockerfile: Dockerfile_workerservice
+    image: shipment-workerservice:latest
+    expose:
+      - 5050
+    ports:
+      - 5050:5050
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  tripplanning-loadbalancer:
+    build:
+      context: ./tripplanning-ms
+      dockerfile: Dockerfile_loadbalancer
+    image: tripplanning-loadbalancer:latest
+    expose:
+      - 7020
+    ports:
+      - 7020:7020
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  tripplanning-webservice:
+    build:
+      context: ./tripplanning-ms
+      dockerfile: Dockerfile_webservice
+    image: tripplanning-webservice:latest
+    expose:
+      - 6020
+    ports:
+      - 6020:6020
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  tripplanning-workerservice:
+    build:
+      context: ./tripplanning-ms
+      dockerfile: Dockerfile_workerservice
+    image: tripplanning-workerservice:latest
+    expose:
+      - 5020
+    ports:
+      - 5020:5020
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+      - vehicle-json-server
+
+
+  triptracking-loadbalancer:
+    build:
+      context: ./triptracking-ms
+      dockerfile: Dockerfile_loadbalancer
+    image: triptracking-loadbalancer:latest
+    expose:
+      - 7030
+    ports:
+      - 7030:7030
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  triptracking-webservice:
+    build:
+      context: ./triptracking-ms
+      dockerfile: Dockerfile_webservice
+    image: triptracking-webservice:latest
+    expose:
+      - 6030
+    ports:
+      - 6030:6030
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  triptracking-workerservice:
+    build:
+      context: ./triptracking-ms
+      dockerfile: Dockerfile_workerservice
+    image: triptracking-workerservice:latest
+    expose:
+      - 5030
+    ports:
+      - 5030:5030
+    env_file:
+      - ./env-files/local/common.env
+    depends_on:
+      - config-server
+      - discovery-server
+      - gateway
+
+  vehicle-json-server:
+    image: vimagick/json-server
+    command: -H 0.0.0.0 -p 3000 -w /data/db.json
+    container_name: vehicle-json-server
+    # network_mode: host
+    ports:
+      - 3000:3000
+    volumes:
+    - ./tripplanning-ms/vehicle.json:/data/db.json

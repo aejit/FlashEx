@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: user-microservice
+  cloud:
+    config:
+      uri: ${CONFIG_URL}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${REGISTRY_URL}
+#service.message=Hello, World

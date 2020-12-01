@@ -1,0 +1,19 @@
+.vehicle-card {
+    width: 200px;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.page-title {
+    margin: 2vh 3% 2vh 3%;
+    width: 94%;
+    padding-top: 2vh;
+}
+
+.vehicles-card-container {
+    display: flex;
+}
+
+.title-part {
+    color: gray;
+}

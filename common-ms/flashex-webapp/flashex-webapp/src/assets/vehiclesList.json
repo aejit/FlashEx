@@ -1,0 +1,242 @@
+[
+  {
+    "vehicleId": 1,
+    "vehicleType": "Box Truck",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Marci Butler",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 2,
+    "vehicleType": "Jeep",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Hoover Pruitt",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 3,
+    "vehicleType": "Jeep",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Leona Whitaker",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 4,
+    "vehicleType": "Box Truck",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Alvarez Chase",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 5,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Rasmussen Stewart",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 6,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Leblanc Todd",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 7,
+    "vehicleType": "Box Truck",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Bryant Cobb",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 8,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Vance Frank",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 9,
+    "vehicleType": "Jeep",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Hooper Kirk",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 10,
+    "vehicleType": "Box Truck",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Tracy Vaughan",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 11,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Daphne Luna",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 12,
+    "vehicleType": "Jeep",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Aurora Beck",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 13,
+    "vehicleType": "Box Truck",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Goff Mcneil",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 14,
+    "vehicleType": "Box Truck",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Alison Evans",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 15,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Elsa Serrafalse",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 16,
+    "vehicleType": "Jeep",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Heather Savage",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 17,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Jami Lancaster",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 18,
+    "vehicleType": "Jeep",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Luann Fowler",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 19,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Hickman Castaneda",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 20,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Peterson Roberts",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 21,
+    "vehicleType": "Jeep",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Sophia Burke",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 22,
+    "vehicleType": "Jeep",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Woods Benson",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 23,
+    "vehicleType": "Box Truck",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Thompson Dixon",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 24,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Powers Kline",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 25,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Martinez Parker",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 26,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Helga Meyers",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 27,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Jolene Burnett",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 28,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": false,
+    "vehicleCrew": "Haley Watson",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 29,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Boone Guerra",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  },
+  {
+    "vehicleId": 30,
+    "vehicleType": "Cargo Van",
+    "vehicleVolume": 30,
+    "availability": true,
+    "vehicleCrew": "Christi Contreras",
+    "vehicleImage": "https://loremflickr.com/640/480/vehicle"
+  }
+]

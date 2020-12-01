@@ -1,0 +1,103 @@
+#---------------------OR TOOLS LIB BUILD--------------------#
+FROM maven:3.6-jdk-11 as or-tools-build
+
+COPY google-or-tools-lib/or-tools_Ubuntu-18.04-64bit_v7.4.7247 /usr/local/google-or-tools
+
+RUN mvn install:install-file -Dfile=/usr/local/google-or-tools/lib/com.google.ortools.jar -DgroupId=com.google.ortools -DartifactId=com.google.ortools -Dversion=7.4.7 -Dpackaging=jar
+
+
+#---------------------LIB BUILD--------------------#
+#FROM maven:3.6.2-jdk-12 AS lib-build
+FROM prithivid/flashexdepends:latest AS lib-build
+
+RUN mkdir -p /app/libs
+
+COPY --from=or-tools-build /root/.m2/repository /root/.m2/repository
+
+COPY --from=or-tools-build /usr/local/google-or-tools /usr/local/google-or-tools
+
+COPY tripplanning-lib/pom.xml /app/libs/pom.xml
+
+WORKDIR /app/libs/
+
+ENV MVN="mvn -f /app/libs/pom.xml"
+
+RUN $MVN --version
+
+RUN $MVN dependency:go-offline
+
+#ENV PATH="/usr/local/google-or-tools/lib:${PATH}"
+
+RUN ls -a
+
+#CMD ["/bin/bash"]
+
+COPY tripplanning-lib/src /app/libs/src
+
+RUN $MVN clean install -DskipTests
+
+#-------------------BUILD SERVICE-------------------#
+#FROM maven:3.6.2-jdk-12 AS build
+FROM prithivid/flashexdepends:latest AS build
+#FROM rajiff/prepackaged-google-or-tools:latest AS build
+
+RUN mkdir -p /app/service
+
+COPY --from=or-tools-build /root/.m2/repository /root/.m2/repository
+
+COPY tripplanning-web-service/pom.xml /app/service/pom.xml
+
+WORKDIR /app/service/
+
+ENV MVN="mvn -f /app/service/pom.xml"
+
+RUN $MVN --version
+
+COPY --from=lib-build /root/.m2/repository/com/flashex /root/.m2/repository/com/flashex
+
+RUN $MVN dependency:go-offline
+
+COPY tripplanning-web-service/src /app/service/src
+
+RUN $MVN clean package -DskipTests
+
+#---------------------WAIT-FOR---------------------#
+FROM gesellix/wait-for as waitfor
+
+#-------------------START SERVICE-------------------#
+
+FROM maven:3.6-jdk-11
+
+RUN apt-get update
+
+RUN apt-get install -y netcat
+
+RUN curl http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc6_2.29-0ubuntu2_amd64.deb --output libc6_2.29-0ubuntu2_amd64.deb
+
+RUN dpkg -i libc6_2.29-0ubuntu2_amd64.deb
+
+#RUN apt-get install -y libstdc++6
+
+COPY --from=or-tools-build /usr/local/google-or-tools/lib /usr/lib
+
+#ENV PATH="/usr/local/google-or-tools/:${PATH}"
+
+CMD ["/bin/bash"]
+
+#COPY --from=lib-build /root/.m2/repository/com/flashex /root/.m2/repository/com/flashex
+
+COPY --from=build /app/service/target/*.jar app.jar
+
+#RUN mkdir /target
+
+#COPY --from=build /app/service/target /target
+
+COPY --from=waitfor ./wait-for ./wait-for
+
+EXPOSE 6020
+
+ENTRYPOINT [ "./wait-for", "config-server:8888", "-t", "20", "--", "java", "-jar", "app.jar"]
+
+#ENTRYPOINT ["java","-jar","app.jar"]
+
+#----------------------------------------------------#

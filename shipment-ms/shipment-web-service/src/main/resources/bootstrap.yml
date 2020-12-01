@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: shipment-microservice-webservice
+  cloud:
+    config:
+      uri: ${CONFIG_URL}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${REGISTRY_URL}

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: discovery-server
+  #spring.cloud.config.uri=http://localhost:8888
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: flashex-webapp
+  cloud:
+    config:
+      uri: ${CONFIG_URL}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${REGISTRY_URL}

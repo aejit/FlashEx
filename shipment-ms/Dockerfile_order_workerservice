@@ -1,0 +1,60 @@
+#---------------------LIB BUILD--------------------#
+#FROM maven:3.6.2-jdk-12 AS lib-build
+FROM prithivid/flashexdepends:latest AS lib-build
+
+RUN mkdir -p /app/libs
+
+COPY shipment-lib/pom.xml /app/libs/pom.xml
+
+WORKDIR /app/libs/
+
+ENV MVN="mvn -f /app/libs/pom.xml"
+
+RUN $MVN --version
+
+RUN $MVN dependency:go-offline
+
+COPY shipment-lib/src /app/libs/src
+
+RUN $MVN clean install -DskipTests
+
+#-------------------BUILD SERVICE-------------------#
+#FROM maven:3.6.2-jdk-12 AS build
+FROM prithivid/flashexdepends:latest AS build
+
+RUN mkdir -p /app/service
+
+COPY order-worker-service/pom.xml /app/service/pom.xml
+
+WORKDIR /app/service/
+
+ENV MVN="mvn -f /app/service/pom.xml"
+
+RUN $MVN --version
+
+COPY --from=lib-build /root/.m2/repository/com/flashex /root/.m2/repository/com/flashex
+
+RUN $MVN dependency:go-offline
+
+COPY order-worker-service/src /app/service/src
+
+RUN $MVN clean package -DskipTests
+
+#---------------------WAIT-FOR---------------------#
+FROM gesellix/wait-for as waitfor
+
+#-------------------START SERVICE-------------------#
+FROM openjdk:12-alpine
+
+#COPY --from=lib-build /root/.m2/repository/com/flashex /root/.m2/repository/com/flashex
+
+COPY --from=build /app/service/target/*.jar app.jar
+
+COPY --from=waitfor ./wait-for ./wait-for
+
+EXPOSE 5010
+
+ENTRYPOINT [ "./wait-for", "config-server:8888", "-t", "20", "--", "java", "-jar", "app.jar"]
+# ENTRYPOINT ["java","-jar","app.jar"]
+
+#----------------------------------------------------#

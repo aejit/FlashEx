@@ -1,0 +1,170 @@
+/* .example-small-box,
+.example-large-box {
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.example-small-box {
+    width: 100%;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+    position: absolute;
+    z-index: 2;
+}
+
+h1.example-app-name {
+    margin-left: 8px;
+}
+
+.example-is-mobile .example-sidenav-container {
+    flex: 1 0 auto;
+}
+
+.sidenav {
+    width: 180px;
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+.mat-card {
+    display: inline-grid;
+    margin: 10px;
+}
+
+.example-header-image {
+    background-image: url('../../../../assets/images/images.png');
+    background-size: cover;
+}
+
+.example-header-image1 {
+    background-image: url('../../../../assets/images/wrong.png');
+    background-size: cover;
+}
+
+table {
+    width: 100%;
+}
+
+span {
+    /* padding-left: 200px; */
+
+
+/* font-size: 12px;
+color: #635e5e;
+width: max-content;
+margin: 5px;
+
+}
+b {
+    color: rgb(129, 126, 126);
+}
+.display {
+    background-image: url('../../../../assets/images/search_error.png');
+    background-size: cover;
+}
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+.mat-card-avatar {
+    height: 25px;
+    width: 25px;
+}
+.mat-list-base {
+    display: table;
+}
+.material-icons {
+    font-size: 15px;
+    line-height: 2;
+}
+#map {
+    height: 64vh;
+    width: 75vw;
+}
+.mat-expansion-panel {
+    padding: 0px 0px;
+}
+*/
+
+img {
+    width: 6.1rem;
+    height: 2.5rem;
+    display: block;
+    cursor: pointer;
+    outline: 0;
+}
+
+.navbar {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+.google {
+    width: 2em;
+    height: 2em;
+}
+
+.logout {
+    cursor: pointer;
+}
+
+.mat-menu-content {
+    background-color: rgb(211, 205, 205);
+}
+
+#map {
+    height: 64vh;
+    width: auto;
+}
+
+
+/* .person {
+    font-size: 25px;
+    line-height: 2;
+    margin-bottom: 15px;
+} */
+
+
+/*
+@media screen and (max-width: 425px) {
+    .status {
+        display: none;
+    }
+    
+    div.fullview {
+        display: none;
+    }
+    
+    mat-icon.material-icons {
+        display: none;
+    }
+    
+    button.show {
+        display: contents;
+    }
+}
+@media screen and (min-width:426px) {
+    button.show {
+        display: none;
+    }
+}  */

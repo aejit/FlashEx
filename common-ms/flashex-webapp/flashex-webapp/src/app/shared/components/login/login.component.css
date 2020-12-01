@@ -1,0 +1,43 @@
+mat-form-field {
+    margin: auto;
+    width: 280px;
+}
+
+button {
+    width: 40%;
+    padding: auto;
+}
+
+.bodytag {
+    z-index: -5;
+    overflow: hidden;
+    width: 100%;
+    background-image: url("../../../../assets/images/longexposurebackgroundimage.jpg");
+    background-attachment: fixed;
+    height: 100vh;
+    /* margin-top: auto; */
+    justify-content: center;
+    background-size: 60vh;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.matcard {
+    padding: 16px;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+mat-hint {
+    font-size: smaller;
+}
+
+.validation {
+    margin-bottom: -1.5em;
+    padding-top: 1.5em;
+}

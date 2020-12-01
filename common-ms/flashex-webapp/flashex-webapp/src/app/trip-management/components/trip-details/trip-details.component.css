@@ -1,0 +1,126 @@
+mat-card {
+    box-shadow: none !important;
+}
+
+.dropdown {
+    width: 50%;
+}
+
+.toolbar {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.toolbar-title {
+    width: 100%;
+}
+
+.mat-title {
+    margin: 16px 0 16px 0;
+}
+
+.summary-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trip-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 8vh 0 0 0;
+}
+
+.title-part {
+    color: gray;
+}
+
+.table-header {
+    display: inline-flex;
+}
+
+.table-header .space-filler {
+    display: inline-block;
+    width: 24em;
+}
+
+@media screen and (max-width: 768px) and (min-width: 416px) {
+    .summary-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .table-header .space-filler {
+        display: inline-block;
+        width: 11em;
+    }
+    .mat-typography h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .summary-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .table-header .space-filler {
+        display: inline-block;
+        width: 7em;
+    }
+    .mat-typography h1 {
+        font-size: 1rem;
+    }
+}
+
+.graph1 {
+    width: 50%;
+    height: 45vh;
+    text-align: center;
+    background: rgb(215, 247, 229);
+    padding-bottom: 20px;
+}
+.graph2 {
+    width: 50%;
+    height: 45vh;
+    text-align: center;
+    background: rgb(215, 247, 229);
+    padding-bottom: 20px;
+    
+}
+.graph3 {
+    width: 50%;
+    height: 45vh;
+    text-align: center;
+    background: rgb(215, 247, 229);
+    padding-bottom: 20px;
+}
+.graph4 {
+    width: 50%;
+    height: 45vh;
+    text-align: center;
+    background: rgb(215, 247, 229);
+    padding-bottom: 20px;
+}
+.legend{
+    height: 7vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    color: black;
+    text-align: center;
+    font-weight: normal;
+    /* font-weight: bold; */
+}
+
+#setPropertiesButton{
+    height: 6vh;
+    margin-top: 2vh;
+    padding-right: 1vw;
+}
+
+

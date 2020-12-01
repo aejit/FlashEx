@@ -1,0 +1,301 @@
+[{
+        "tripItineraryId": "TRIP01NOV2019A",
+        "tripSequence": 1,
+        "tripStartTime": "8:00 AM",
+        "tripEndTime": "10:00 AM",
+        "tripDistance": "22 KM",
+        "hubLocation": "HUB2",
+        "orders": [{
+
+                "orderId": 1,
+                "name": "Darshan",
+                "contactNo": 987654321,
+                "deliveryAddress": "Kormangala",
+                "deliveryLocation": {
+                    "lat": 12.9354504,
+                    "lng": 77.6146828
+                }
+            },
+            {
+
+                "orderId": 2,
+                "name": "Bharat",
+                "contactNo": 987654321,
+                "deliveryAddress": "Jayanagar",
+                "deliveryLocation": {
+                    "lat": 12.9292117,
+                    "lng": 77.5696453
+                }
+            },
+            {
+
+                "orderId": 3,
+                "name": "James",
+                "contactNo": 987654321,
+                "deliveryAddress": "Silk Board",
+                "deliveryLocation": {
+                    "lat": 12.9344832,
+                    "lng": 77.5929685
+                }
+            }, {
+
+                "orderId": 4,
+                "name": "Vaibhav",
+                "contactNo": 987654321,
+                "deliveryAddress": "Atturu",
+                "deliveryLocation": {
+                    "lat": 13.0997113,
+                    "lng": 77.8441297
+                }
+            },
+            {
+
+                "orderId": 5,
+                "name": "Indra",
+                "contactNo": 987654321,
+                "deliveryAddress": "DanduPalya",
+                "deliveryLocation": {
+                    "lat": 13.074047,
+                    "lng": 77.8019527
+                }
+            },
+            {
+
+                "orderId": 6,
+                "name": "Sachin",
+                "contactNo": 987654321,
+                "deliveryAddress": "KR Puram",
+                "deliveryLocation": {
+                    "lat": 13.0050907,
+                    "lng": 77.6904627
+                }
+            }
+        ]
+    },
+    {
+        "tripItineraryId": "TRIP01NOV2019B",
+        "tripSequence": 2,
+        "tripStartTime": "11:00 AM",
+        "tripEndTime": "2:00 PM",
+        "tripDistance": "24 KM",
+        "hubLocation": "HUB2",
+
+        "orders": [{
+
+                "orderId": 1,
+                "name": "Saif",
+                "contactNo": 987654321,
+                "deliveryAddress": "Marathalli",
+                "deliveryLocation": {
+                    "lat": 12.9577129,
+                    "lng": 77.6764937
+                }
+            },
+            {
+
+                "orderId": 2,
+                "name": "Prem",
+                "contactNo": 987654321,
+                "deliveryAddress": "Kadubeesanahalli",
+                "deliveryLocation": {
+                    "lat": 12.9393442,
+                    "lng": 77.6880849
+                }
+            },
+            {
+
+                "orderId": 3,
+                "name": "Sarfaraz",
+                "contactNo": 987654321,
+                "deliveryAddress": "Bellandur",
+                "deliveryLocation": {
+                    "lat": 12.9322784,
+                    "lng": 77.6573238
+                }
+            },
+            {
+
+                "orderId": 4,
+                "name": "Vaibhav",
+                "contactNo": 987654321,
+                "deliveryAddress": "Atturu",
+                "deliveryLocation": {
+                    "lat": 13.0997113,
+                    "lng": 77.8441297
+                }
+            },
+            {
+
+                "orderId": 5,
+                "name": "Indra",
+                "contactNo": 987654321,
+                "deliveryAddress": "DanduPalya",
+                "deliveryLocation": {
+                    "lat": 13.074047,
+                    "lng": 77.8019527
+                }
+            },
+            {
+
+                "orderId": 6,
+                "name": "Sachin",
+                "contactNo": 987654321,
+                "deliveryAddress": "KR Puram",
+                "deliveryLocation": {
+                    "lat": 13.0050907,
+                    "lng": 77.6904627
+                }
+            }
+        ]
+    },
+    {
+        "tripItineraryId": "TRIP01NOV2019C",
+        "tripSequence": 3,
+        "tripStartTime": "3:00 PM",
+        "tripEndTime": "5:00 PM",
+        "tripDistance": "10 KM",
+        "hubLocation": "HUB2",
+        "orders": [{
+
+                "orderId": 1,
+                "name": "Prithvi",
+                "contactNo": 987654321,
+                "deliveryAddress": "Balagere",
+                "deliveryLocation": {
+                    "lat": 12.9384993,
+                    "lng": 77.7109698
+                }
+            },
+            {
+
+                "orderId": 2,
+                "name": "Abhishke",
+                "contactNo": 987654321,
+                "deliveryAddress": "Jcr Layout",
+                "deliveryLocation": {
+                    "lat": 12.9325534,
+                    "lng": 77.7047865
+                }
+            },
+            {
+
+                "orderId": 3,
+                "name": "Amit",
+                "contactNo": 987654321,
+                "deliveryAddress": "Gunjur Palys",
+                "deliveryLocation": {
+                    "lat": 12.9218247,
+                    "lng": 77.7185861
+                }
+            },
+            {
+
+                "orderId": 4,
+                "name": "Vaibhav",
+                "contactNo": 987654321,
+                "deliveryAddress": "Atturu",
+                "deliveryLocation": {
+                    "lat": 13.0997113,
+                    "lng": 77.8441297
+                }
+            },
+            {
+
+                "orderId": 5,
+                "name": "Indra",
+                "contactNo": 987654321,
+                "deliveryAddress": "DanduPalya",
+                "deliveryLocation": {
+                    "lat": 13.074047,
+                    "lng": 77.8019527
+                }
+            },
+            {
+
+                "orderId": 6,
+                "name": "Sachin",
+                "contactNo": 987654321,
+                "deliveryAddress": "KR Puram",
+                "deliveryLocation": {
+                    "lat": 13.0050907,
+                    "lng": 77.6904627
+                }
+            }
+        ]
+    },
+    {
+        "tripItineraryId": "TRIP01NOV2019D",
+        "tripSequence": 4,
+        "tripStartTime": "5:00 PM",
+        "tripEndTime": "7:00 PM",
+        "tripDistance": "22 KM",
+        "hubLocation": "HUB2",
+        "orders": [{
+
+                "orderId": 1,
+                "name": "Vaibhav",
+                "contactNo": 987654321,
+                "deliveryAddress": "Atturu",
+                "deliveryLocation": {
+                    "lat": 13.0997113,
+                    "lng": 77.8441297
+                }
+            },
+            {
+
+                "orderId": 2,
+                "name": "Vaibhavi",
+                "contactNo": 987654321,
+                "deliveryAddress": "DanduPalya",
+                "deliveryLocation": {
+                    "lat": 13.074047,
+                    "lng": 77.8019527
+                }
+            },
+            {
+
+                "orderId": 3,
+                "name": "Sachin",
+                "contactNo": 987654321,
+                "deliveryAddress": "KR Puram",
+                "deliveryLocation": {
+                    "lat": 13.0050907,
+                    "lng": 77.6904627
+                }
+            },
+            {
+
+                "orderId": 4,
+                "name": "Vaibhav",
+                "contactNo": 987654321,
+                "deliveryAddress": "Atturu",
+                "deliveryLocation": {
+                    "lat": 13.0997113,
+                    "lng": 77.8441297
+                }
+            },
+            {
+
+                "orderId": 5,
+                "name": "Indra",
+                "contactNo": 987654321,
+                "deliveryAddress": "DanduPalya",
+                "deliveryLocation": {
+                    "lat": 13.074047,
+                    "lng": 77.8019527
+                }
+            },
+            {
+
+                "orderId": 6,
+                "name": "Sachin",
+                "contactNo": 987654321,
+                "deliveryAddress": "KR Puram",
+                "deliveryLocation": {
+                    "lat": 13.0050907,
+                    "lng": 77.6904627
+                }
+            }
+        ]
+    }
+]

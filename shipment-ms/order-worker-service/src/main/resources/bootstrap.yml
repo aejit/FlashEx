@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: order-microservice-workerservice
+  cloud:
+    config:
+      uri: ${CONFIG_URL}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${REGISTRY_URL}

@@ -1,0 +1,12 @@
+button{
+  /* position: fixed; */
+  top:0;
+  left:12em;
+  size: .5em;
+}
+.matdialogtitle{
+  color: grey ;
+}
+h3{
+  color: grey;
+}

@@ -1,0 +1,915 @@
+{"orderList":
+  [
+  {
+    "packetDescription": "incididunt dolore dolore magna laborum nulla ad est esse nondalfkhalshkhflakshdflafaldskhfalkdfalkhfalsfkaldkhfalksfladskhfalkdfhalkdjfaldkfalkdfjaldkfjalskfjalkjflakdjfalkfjalkdjfalkjdflkajfdlkjaslkfjalkfjalkdfjalkfjalkjdlakjfdalkdjlakfjdalk",
+    "deliveryDescription": "dalfkhalshkhflakshdflafaldskhfalkdfalkhfalsfkaldkhfalksfladskhfalkdfhalkdjfaldkfalkdfjaldkfjalskfjalkjflakdjfalkfjalkdjfalkjdflkajfdlkjaslkfjalkfjalkdfjalkfjalkjdlakjfdalkdjlakfjdalk",
+    "packetType": "FLAMMABLE",
+    "priority": "LOW",
+    "currentStatus": "UNDELIVERED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-04T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-04T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-04T10:15:00.000+0000"
+      },
+      {
+        "statusValue": "UNDELIVERED",
+        "timeStamp": "2019-12-04T12:15:00.000+0000"
+      }
+    ],
+    "weight": 5.8,
+    "length": 40,
+    "breadth": 54,
+    "height": 68,
+    "costOfPacket": 32916,
+    "receivedDate": "2019-12-04T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-04T012:00:00.000+0000",
+    "actualDeliveryDate": "2019-12-04T012:15:00.000+0000",
+    "customer": {
+      "firstName": "Gonzales",
+      "middleName": "Salinas",
+      "lastName": "Chang",
+      "emailId": "goodmanconner@pivitol.com",
+      "phoneNumber": 83249520
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "officia sit amet incididunt culpa veniam culpa ad anim irure",
+    "deliveryDescription": "nostrud labore cillum ipsum exercitation amet commodo enim incididunt dolore",
+    "packetType": "FRAGILE",
+    "priority": "HIGH",
+    "currentStatus": "RECEIVED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-04T08:15:18.000+0000"
+      }
+    ],
+    "weight": 3.1,
+    "length": 66,
+    "breadth": 56,
+    "height": 31,
+    "costOfPacket": 34732,
+    "receivedDate": "2019-12-04T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-04T012:00:00.000+0000",
+    "actualDeliveryDate": "2019-12-04T012:15:00.000+0000",
+    "customer": {
+      "firstName": "Tyler",
+      "middleName": "Bright",
+      "lastName": "Martin",
+      "emailId": "madelinesuarez@zillan.com",
+      "phoneNumber": 94451522
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "ipsum ea in aute ad ullamco dolor id non pariatur",
+    "deliveryDescription": "officia sint amet pariatur fugiat elit commodo et deserunt quis",
+    "packetType": "FLAMMABLE",
+    "priority": "HIGH",
+    "currentStatus": "PROCESSED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-04T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-04T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-04T10:15:00.000+0000"
+      },
+      {
+        "statusValue": "DELIVERED",
+        "timeStamp": "2019-12-04T12:15:00.000+0000"
+      }
+    ],
+    "weight": 3.5,
+    "length": 88,
+    "breadth": 59,
+    "height": 42,
+    "costOfPacket": 17053,
+    "receivedDate": "2019-12-04T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-04T012:00:00.000+0000",
+    "actualDeliveryDate": "2019-12-04T012:15:00.000+0000",
+    "customer": {
+      "firstName": "Marsh",
+      "middleName": "Mcconnell",
+      "lastName": "Ramirez",
+      "emailId": "dunngallagher@bittor.com",
+      "phoneNumber": 93042738
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "non dolore incididunt laboris do consequat ut cillum non nulla",
+    "deliveryDescription": "irure veniam laboris nostrud laborum incididunt exercitation pariatur dolor excepteur",
+    "packetType": "FRAGILE",
+    "priority": "HIGH",
+    "currentStatus": "DELIVERED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-04T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-04T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-04T10:15:00.000+0000"
+      },
+      {
+        "statusValue": "DELIVERED",
+        "timeStamp": "2019-12-04T12:15:00.000+0000"
+      }
+    ],
+    "weight": 2.8,
+    "length": 27,
+    "breadth": 61,
+    "height": 53,
+    "costOfPacket": 50481,
+    "receivedDate": "2019-12-04T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-04T012:00:00.000+0000",
+    "actualDeliveryDate": "2019-12-04T012:15:00.000+0000",
+    "customer": {
+      "firstName": "Wilkins",
+      "middleName": "Rowland",
+      "lastName": "Avila",
+      "emailId": "kelleygalloway@pyramax.com",
+      "phoneNumber": 92756623
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "sint minim officia nostrud proident do sint consequat est voluptate",
+    "deliveryDescription": "aliquip consequat anim aliquip minim aliquip ullamco laborum et ipsum",
+    "packetType": "FLAMMABLE",
+    "priority": "LOW",
+    "currentStatus": "DELIVERED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-04T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-04T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-04T10:15:00.000+0000"
+      },
+      {
+        "statusValue": "DELIVERED",
+        "timeStamp": "2019-12-04T12:15:00.000+0000"
+      }
+    ],
+    "weight": 1.8,
+    "length": 62,
+    "breadth": 47,
+    "height": 35,
+    "costOfPacket": 17816,
+    "receivedDate": "2019-12-04T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-04T012:00:00.000+0000",
+    "actualDeliveryDate": "2019-12-04T012:15:00.000+0000",
+    "customer": {
+      "firstName": "Bonner",
+      "middleName": "Olsen",
+      "lastName": "Villarreal",
+      "emailId": "margiegould@interfind.com",
+      "phoneNumber": 87156122
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "pariatur dolor tempor duis esse et excepteur eiusmod labore dolore",
+    "deliveryDescription": "non in esse id officia id aliqua cillum reprehenderit irure",
+    "packetType": "FRAGILE",
+    "priority": "MEDIUM",
+    "currentStatus": "DELIVERED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-04T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-04T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-04T10:15:00.000+0000"
+      },
+      {
+        "statusValue": "DELIVERED",
+        "timeStamp": "2019-12-04T12:15:00.000+0000"
+      }
+    ],
+    "weight": 4,
+    "length": 55,
+    "breadth": 32,
+    "height": 82,
+    "costOfPacket": 84791,
+    "receivedDate": "2019-12-04T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-04T012:00:00.000+0000",
+    "actualDeliveryDate": "2019-12-04T012:15:00.000+0000",
+    "customer": {
+      "firstName": "Neal",
+      "middleName": "Kemp",
+      "lastName": "Witt",
+      "emailId": "earlenegreer@vetron.com",
+      "phoneNumber": 89350927
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "ut non incididunt proident amet adipisicing consectetur deserunt veniam nostrud",
+    "deliveryDescription": "incididunt excepteur laborum nostrud nostrud incididunt fugiat exercitation veniam duis",
+    "packetType": "FLAMMABLE",
+    "priority": "MEDIUM",
+    "currentStatus": "DELIVERED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-04T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-04T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-04T10:15:00.000+0000"
+      },
+      {
+        "statusValue": "DELIVERED",
+        "timeStamp": "2019-12-04T12:15:00.000+0000"
+      }
+    ],
+    "weight": 4.2,
+    "length": 44,
+    "breadth": 53,
+    "height": 88,
+    "costOfPacket": 10884,
+    "receivedDate": "2019-12-04T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-04T012:00:00.000+0000",
+    "actualDeliveryDate": "2019-12-04T012:15:00.000+0000",
+    "customer": {
+      "firstName": "Franco",
+      "middleName": "Rush",
+      "lastName": "Dickerson",
+      "emailId": "meadowsrojas@tubesys.com",
+      "phoneNumber": 84959430
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "eu tempor excepteur minim excepteur occaecat dolor irure amet tempor",
+    "deliveryDescription": "incididunt ipsum nisi non ut qui commodo ea amet non",
+    "packetType": "PERISHABLE",
+    "priority": "HIGH",
+    "currentStatus": "DELIVERED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-04T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-04T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-04T10:15:00.000+0000"
+      },
+      {
+        "statusValue": "DELIVERED",
+        "timeStamp": "2019-12-04T12:15:00.000+0000"
+      }
+    ],
+    "weight": 5.9,
+    "length": 97,
+    "breadth": 38,
+    "height": 65,
+    "costOfPacket": 44702,
+    "receivedDate": "2019-12-04T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-04T012:00:00.000+0000",
+    "actualDeliveryDate": "2019-12-04T012:15:00.000+0000",
+    "customer": {
+      "firstName": "Maddox",
+      "middleName": "Conrad",
+      "lastName": "Ferrell",
+      "emailId": "coffeysnider@acruex.com",
+      "phoneNumber": 98547433
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "laborum eiusmod eiusmod culpa cillum adipisicing et enim officia dolore",
+    "deliveryDescription": "mollit ullamco ipsum consectetur voluptate amet tempor velit nostrud amet",
+    "packetType": "FLAMMABLE",
+    "priority": "HIGH",
+    "currentStatus": "DELIVERED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-04T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-04T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-04T10:15:00.000+0000"
+      },
+      {
+        "statusValue": "DELIVERED",
+        "timeStamp": "2019-12-04T12:15:00.000+0000"
+      }
+    ],
+    "weight": 4.1,
+    "length": 76,
+    "breadth": 65,
+    "height": 64,
+    "costOfPacket": 65830,
+    "receivedDate": "2019-12-04T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-04T012:00:00.000+0000",
+    "actualDeliveryDate": "2019-12-04T012:15:00.000+0000",
+    "customer": {
+      "firstName": "Richardson",
+      "middleName": "Alston",
+      "lastName": "Mathews",
+      "emailId": "hardinhendricks@repetwire.com",
+      "phoneNumber": 98342924
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "adipisicing ad laboris ad qui reprehenderit deserunt ea ut ad",
+    "deliveryDescription": "est ea sunt labore fugiat incididunt veniam in adipisicing fugiat",
+    "packetType": "PERISHABLE",
+    "priority": "MEDIUM",
+    "currentStatus": "DELIVERED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-04T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-04T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-04T10:15:00.000+0000"
+      },
+      {
+        "statusValue": "DELIVERED",
+        "timeStamp": "2019-12-04T12:15:00.000+0000"
+      }
+    ],
+    "weight": 6.6,
+    "length": 46,
+    "breadth": 63,
+    "height": 25,
+    "costOfPacket": 19009,
+    "receivedDate": "2019-12-04T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-04T012:00:00.000+0000",
+    "actualDeliveryDate": "2019-12-04T012:15:00.000+0000",
+    "customer": {
+      "firstName": "Wilcox",
+      "middleName": "Spencer",
+      "lastName": "Horn",
+      "emailId": "cantumejia@geeketron.com",
+      "phoneNumber": 81549636
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+ {
+    "packetDescription": "incididunt nulla non dolor do occaecat esse mollit commodo eu",
+    "deliveryDescription": "ad consectetur velit sunt id sint ut voluptate ea minim",
+    "packetType": "FRAGILE",
+    "priority": "MEDIUM",
+    "currentStatus": "DISPATCHED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-05T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-05T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-05T10:15:00.000+0000"
+      }
+    ],
+    "weight": 1,
+    "length": 41,
+    "breadth": 70,
+    "height": 80,
+    "costOfPacket": 90744,
+    "receivedDate": "2019-12-05T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-05T012:00:00.000+0000",
+    "actualDeliveryDate": "",
+    "customer": {
+      "firstName": "Oliver",
+      "middleName": "Mcgee",
+      "lastName": "Duffy",
+      "emailId": "maggiebowman@ultrasure.com",
+      "phoneNumber": 92551435
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "anim aliqua duis ea exercitation eiusmod est mollit ex id",
+    "deliveryDescription": "adipisicing fugiat aute deserunt enim occaecat minim quis qui irure",
+    "packetType": "PERISHABLE",
+    "priority": "HIGH",
+    "currentStatus": "DISPATCHED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-05T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-05T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-05T10:15:00.000+0000"
+      }
+    ],
+    "weight": 0.9,
+    "length": 21,
+    "breadth": 99,
+    "height": 47,
+    "costOfPacket": 35620,
+    "receivedDate": "2019-12-05T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-05T012:00:00.000+0000",
+    "actualDeliveryDate": "",
+    "customer": {
+      "firstName": "Lloyd",
+      "middleName": "Webb",
+      "lastName": "Rowe",
+      "emailId": "bookermckinney@marqet.com",
+      "phoneNumber": 81059339
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "veniam occaecat occaecat duis laboris voluptate laboris esse laborum incididunt",
+    "deliveryDescription": "in ea deserunt ea aute mollit sint qui aliquip pariatur",
+    "packetType": "FRAGILE",
+    "priority": "HIGH",
+    "currentStatus": "DISPATCHED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-05T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-05T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-05T10:15:00.000+0000"
+      }
+    ],
+    "weight": 7.9,
+    "length": 29,
+    "breadth": 52,
+    "height": 58,
+    "costOfPacket": 56769,
+    "receivedDate": "2019-12-05T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-05T012:00:00.000+0000",
+    "actualDeliveryDate": "",
+    "customer": {
+      "firstName": "Franco",
+      "middleName": "Patterson",
+      "lastName": "Robbins",
+      "emailId": "wilkinsbaker@geoforma.com",
+      "phoneNumber": 96958233
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "ex deserunt culpa eu aliquip ullamco est reprehenderit cupidatat amet",
+    "deliveryDescription": "id excepteur occaecat sint dolor cupidatat ad dolore nisi dolor",
+    "packetType": "PERISHABLE",
+    "priority": "LOW",
+    "currentStatus": "DISPATCHED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-05T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-05T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-05T10:15:00.000+0000"
+      }
+    ],
+    "weight": 3.4,
+    "length": 37,
+    "breadth": 51,
+    "height": 70,
+    "costOfPacket": 56520,
+    "receivedDate": "2019-12-05T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-05T012:00:00.000+0000",
+    "actualDeliveryDate": "",
+    "customer": {
+      "firstName": "Roberson",
+      "middleName": "Dunn",
+      "lastName": "Gibbs",
+      "emailId": "avisbuckley@candecor.com",
+      "phoneNumber": 85741823
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "aute velit id laborum ad labore laboris ut voluptate minim",
+    "deliveryDescription": "excepteur ex nulla voluptate sit adipisicing irure in excepteur consequat",
+    "packetType": "REGULAR",
+    "priority": "MEDIUM",
+    "currentStatus": "DISPATCHED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-05T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-05T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-05T10:15:00.000+0000"
+      }
+    ],
+    "weight": 7.3,
+    "length": 34,
+    "breadth": 21,
+    "height": 79,
+    "costOfPacket": 49779,
+    "receivedDate": "2019-12-05T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-05T012:00:00.000+0000",
+    "actualDeliveryDate": "",
+    "customer": {
+      "firstName": "Floyd",
+      "middleName": "Mueller",
+      "lastName": "Bonner",
+      "emailId": "henrytravis@blurrybus.com",
+      "phoneNumber": 91551220
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "deserunt mollit dolore magna qui et duis eu reprehenderit amet",
+    "deliveryDescription": "incididunt culpa voluptate incididunt non officia est nulla exercitation excepteur",
+    "packetType": "REGULAR",
+    "priority": "MEDIUM",
+    "currentStatus": "DISPATCHED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-05T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-05T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-05T10:15:00.000+0000"
+      }
+    ],
+    "weight": 6.5,
+    "length": 92,
+    "breadth": 23,
+    "height": 75,
+    "costOfPacket": 63458,
+    "receivedDate": "2019-12-05T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-05T012:00:00.000+0000",
+    "actualDeliveryDate": "",
+    "customer": {
+      "firstName": "Battle",
+      "middleName": "Fitzgerald",
+      "lastName": "Cannon",
+      "emailId": "maurareese@rodeomad.com",
+      "phoneNumber": 89448429
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "commodo velit reprehenderit fugiat et aliqua enim esse magna eiusmod",
+    "deliveryDescription": "esse Lorem cupidatat nulla Lorem cillum officia proident qui consectetur",
+    "packetType": "FRAGILE",
+    "priority": "MEDIUM",
+    "currentStatus": "DISPATCHED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-05T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-05T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-05T10:15:00.000+0000"
+      }
+    ],
+    "weight": 3.7,
+    "length": 99,
+    "breadth": 26,
+    "height": 70,
+    "costOfPacket": 29750,
+    "receivedDate": "2019-12-05T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-05T012:00:00.000+0000",
+    "actualDeliveryDate": "",
+    "customer": {
+      "firstName": "Lott",
+      "middleName": "Greer",
+      "lastName": "Wall",
+      "emailId": "kellerterry@applidec.com",
+      "phoneNumber": 93254029
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "aliqua et esse tempor minim occaecat aute dolore ipsum fugiat",
+    "deliveryDescription": "ea laborum aliqua nostrud et nostrud eiusmod aute magna cupidatat",
+    "packetType": "FLAMMABLE",
+    "priority": "HIGH",
+    "currentStatus": "DISPATCHED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-05T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-05T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-05T10:15:00.000+0000"
+      }
+    ],
+    "weight": 3.6,
+    "length": 83,
+    "breadth": 33,
+    "height": 46,
+    "costOfPacket": 7690,
+    "receivedDate": "2019-12-05T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-05T012:00:00.000+0000",
+    "actualDeliveryDate": "",
+    "customer": {
+      "firstName": "Wagner",
+      "middleName": "Sutton",
+      "lastName": "Cook",
+      "emailId": "hayeslove@kineticut.com",
+      "phoneNumber": 92157520
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "et cupidatat adipisicing pariatur enim minim reprehenderit deserunt sunt cillum",
+    "deliveryDescription": "proident officia proident pariatur aliqua minim nisi est irure elit",
+    "packetType": "FLAMMABLE",
+    "priority": "HIGH",
+    "currentStatus": "DISPATCHED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-05T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-05T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-05T10:15:00.000+0000"
+      }
+    ],
+    "weight": 8.7,
+    "length": 51,
+    "breadth": 78,
+    "height": 85,
+    "costOfPacket": 25615,
+    "receivedDate": "2019-12-05T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-05T012:00:00.000+0000",
+    "actualDeliveryDate": "",
+    "customer": {
+      "firstName": "Matthews",
+      "middleName": "Bruce",
+      "lastName": "Schultz",
+      "emailId": "ebonyerickson@turnabout.com",
+      "phoneNumber": 92956930
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  },
+  {
+    "packetDescription": "consectetur Lorem velit labore cupidatat dolor voluptate sunt magna minim",
+    "deliveryDescription": "dolore esse deserunt ut dolore laborum labore laborum labore dolore",
+    "packetType": "FRAGILE",
+    "priority": "MEDIUM",
+    "currentStatus": "DISPATCHED",
+    "status": [
+      {
+        "statusValue": "RECEIVED",
+        "timeStamp": "2019-12-05T08:15:18.000+0000"
+      },
+      {
+        "statusValue": "PROCESSED",
+        "timeStamp": "2019-12-05T08:15:30.000+0000"
+      },
+      {
+        "statusValue": "DISPATCHED",
+        "timeStamp": "2019-12-05T10:15:00.000+0000"
+      }
+    ],
+    "weight": 0.8,
+    "length": 56,
+    "breadth": 40,
+    "height": 94,
+    "costOfPacket": 37189,
+    "receivedDate": "2019-12-05T08:15:18.000+0000",
+    "estimatedDeliveryDate": "2019-12-05T012:00:00.000+0000",
+    "actualDeliveryDate": "",
+    "customer": {
+      "firstName": "Ortega",
+      "middleName": "Ramos",
+      "lastName": "Gordon",
+      "emailId": "obrienjefferson@limage.com",
+      "phoneNumber": 84958836
+    },
+    "deliveryAddress": {
+      "addressLine1": "656, 100 Feet Road, Indiranagar, Bangalore",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "latitude": 12.9769497153,
+      "longitude": 77.6408281177,
+      "pincode": 560038
+    }
+  }
+]
+}
+
+
+

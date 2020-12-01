@@ -1,0 +1,114 @@
+variables:
+ DEPLOY_BRANCH: $CI_COMMIT_REF_NAME
+
+cache:
+  paths:
+    - .m2/repository
+    - node_modules/
+
+stages:
+  - build
+  - test
+  - lint
+  - release
+  - production
+
+build_mvn:
+  image: maven:3-jdk-11
+  stage: build
+  tags:
+    - flashex-ci-jobs
+  script:
+    - cd common-ms
+    - mvn clean package
+
+junit_java:
+  image: maven:3-jdk-11
+  stage: test
+  tags:
+    - flashex-ci-jobs
+  script:
+  - cd common-ms
+  - mvn test
+
+pmd_maven:
+  image: maven:3-jdk-11
+  stage: lint
+  tags:
+    - flashex-ci-jobs
+  script:
+  - cd common-ms
+  - mvn pmd:check
+
+# ---------Angular Build
+build_app:
+  image: circleci/node:12-browsers
+  stage: build
+  tags:
+    - flashex-ci-jobs
+  script:
+    - cd common-ms/flashex-webapp/flashex-webapp/
+    - npm install
+# -----------Angular Test
+# karma_unit_tests:
+#   image: circleci/node:12-browsers
+#   stage: test
+#   tags:
+#     - flashex-ci-jobs
+#   script:
+#     - cd common-ms/flashex-webapp/flashex-webapp/
+#     - npm install
+#     - npm run test
+#--------Angular Lint
+tslint_app:
+  image: circleci/node:11-browsers
+  stage: lint
+  tags:
+    - flashex-ci-jobs
+  script:
+  #------go to the path
+    - cd common-ms/flashex-webapp/flashex-webapp/
+    - npm install
+    - npm run lint -- --format json
+# --- Deployment on Release branch
+release_deploy:
+    image: ubuntu:latest
+    stage: release
+    tags:
+      - flashex-ci-jobs
+    before_script:
+    #generate ssh key
+        - mkdir -p ~/.ssh
+        - echo -e "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        - chmod 600 ~/.ssh/id_rsa
+        - 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    script:
+        - ls -ltr
+        - /bin/sh .gitlab-deploy.sh
+    environment:
+        name: production
+        url: http:/flashex-dev.stackroute.io
+    when: on_success
+    only:
+        - release_v0.5.0
+#-----Production Deployment
+production_deploy:
+    image: ubuntu:latest
+    stage: production
+    tags:
+        - flashex-ci-jobs
+    before_script:
+    #generate ssh key
+        - mkdir -p ~/.ssh
+        - echo -e "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        - chmod 600 ~/.ssh/id_rsa
+        - 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    script:
+        - ls -ltr
+        - /bin/sh .gitlab-deploy.sh
+    environment:
+        name: production
+        url: http://flashex-dev.stackroute.io
+    when: manual
+    only: 
+        - master

@@ -1,0 +1,17 @@
+<div class="matdialogtitle"><mat-dialog-actions >
+  <h2 >Delivery by FlashEx</h2>
+    <button mat-button mat-dialog-close >
+        <mat-icon>close</mat-icon>
+    </button>
+</mat-dialog-actions></div>
+<mat-dialog-content class="mat-typography">
+  <div >
+    <h3 style="font-weight: bold">Packet Id: {{data.packet| slice:-6 |uppercase}}</h3>
+      <mat-vertical-stepper>
+        <div *ngFor="let statuslist of data.status">
+          <mat-step label={{statuslist.statusValue}}> {{statuslist.timeStamp}}
+          </mat-step>
+        </div>
+        </mat-vertical-stepper>
+  </div>
+<mat-dialog-actions align="end">

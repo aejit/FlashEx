@@ -1,0 +1,64 @@
+<body class="background">
+    <div class="trips-container">
+        <mat-toolbar class="example-toolbar">
+            <h1 class="example-app-name" style="margin-left: 8px;">Orders and Vehicle Details</h1>
+        </mat-toolbar>
+    </div>
+    <section>
+        <div fxLayout="row wrap" fxLayoutGap="7em" style="margin-bottom: 1em;">
+            <mat-card style="margin-top:27px; min-width: 14em;" class="example-ripple-container mat-elevation-z4" matRipple [matRippleCentered]="centered" [matRippleDisabled]="disabled" [matRippleUnbounded]="unbounded" [matRippleRadius]="radius" [matRippleColor]="color"
+                routerLink="orderdetail">
+                <img style="height: 150px; width: auto;" mat-card-image src="../../../../assets/images/delivery.jpg" alt="Order Details">
+                <mat-card-content>
+                    <h4 style="text-align: center; font-size: medium; color: #f15a28;">Orders</h4>
+                    <p style="font-size: medium;color: #4a4a4a;">See all the shipment details</p>
+                </mat-card-content>
+
+            </mat-card>
+
+
+
+            <mat-card style="margin-top: 27px; min-width: 14em;" class="example-ripple-container mat-elevation-z4" matRipple [matRippleCentered]="centered" [matRippleDisabled]="disabled" [matRippleUnbounded]="unbounded" [matRippleRadius]="radius" [matRippleColor]="color"
+                routerLink="vehicledetail">
+
+                <img mat-card-image style="height: 100px; width: auto; padding-top: 50px;" src="../../../../assets/images/vehicle.svg" alt="Vehicle Details">
+                <mat-card-content>
+                    <h4 style="text-align: center; font-size: medium; color: #f15a28;">Vehicle Details</h4>
+
+                    <p style="font-size: medium;color: #4a4a4a;">Find out the vehicle details</p>
+                </mat-card-content>
+            </mat-card>
+
+
+        </div>
+    </section>
+    <section>
+        <div class="trips-container">
+            <mat-toolbar class="example-toolbar">
+                <h1 class="example-app-name" style="margin-left: 8px;">Plan, Schedule and Track</h1>
+            </mat-toolbar>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="7em" style="margin-bottom: 1em;">
+
+            <mat-card style="margin-top:27px; min-width: 14em;" class="example-ripple-container mat-elevation-z4" matRipple [matRippleCentered]="centered" [matRippleDisabled]="disabled" [matRippleUnbounded]="unbounded" [matRippleRadius]="radius" [matRippleColor]="color"
+                routerLink="tripitinerary">
+                <img mat-card-image src="../../../../assets/images/NDD_Logo.png" alt="Trip Details" style="height: 100px; width: auto; padding-top: 50px;">
+                <mat-card-content>
+                    <h4 style="text-align: center; font-size: medium; color: #f15a28;">Trip Planner</h4>
+                    <p style="font-size: medium;color: #4a4a4a;">Plan the trips and schedule</p>
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card style="margin-top:27px; margin-right:20px; min-width: 14em;" class="example-ripple-container mat-elevation-z4" matRipple [matRippleCentered]="centered" [matRippleDisabled]="disabled" [matRippleUnbounded]="unbounded" [matRippleRadius]="radius"
+                [matRippleColor]="color" routerLink="triptrack">
+
+                <img mat-card-image style="height: 100px; width: auto; padding-top: 50px;" src="../../../../assets/images/HL_Icon.png" alt="Trips Tracking">
+                <mat-card-content>
+                    <h4 style="text-align: center; font-size: medium; color: #f15a28;">Track Your Trips</h4>
+
+                    <p style="font-size: medium;color: #4a4a4a;">Check the live status of trips</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </section>
+</body>

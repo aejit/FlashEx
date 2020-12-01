@@ -1,0 +1,59 @@
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 10px;
+}
+
+.container{
+  width: 100%;
+  padding: 0;
+}
+
+.mat-dialog-container{
+  padding: 0;
+}
+
+table {
+  text-align: center !important;
+  width: 100%;
+}
+
+.form-field{
+  width: 60%;
+}
+/* 
+.td, .th{
+  width: 50%;
+  padding: 0%;
+} */
+
+.divider{
+  width: 10px;
+}
+.mat-card{
+  margin-top: 5px;
+}
+.button{
+  margin: 0 auto;
+  display: table;
+}
+.mat-icon{
+  color: primary;
+}
+.align{
+  position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.mat-form-field{
+  width:100%;
+  padding: 0 ;
+  margin: 0;
+}

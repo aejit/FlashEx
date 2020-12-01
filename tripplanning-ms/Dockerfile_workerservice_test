@@ -1,0 +1,86 @@
+FROM gesellix/wait-for as waitfor
+
+FROM maven:3.6-jdk-11
+
+RUN apt-get update
+
+RUN apt-get install -y netcat
+
+#RUN apt-get install -y libstdc++ gcompat
+
+RUN apt-get install -y libstdc++
+
+COPY google-or-tools-lib/or-tools_Ubuntu-18.04-64bit_v7.4.7247 /usr/local/google-or-tools
+
+RUN mvn install:install-file -Dfile=/usr/local/google-or-tools/lib/com.google.ortools.jar -DgroupId=com.google.ortools -DartifactId=com.google.ortools -Dversion=7.4.7 -Dpackaging=jar
+
+#-----------------------------------------------------------------------------------------
+RUN mkdir -p /app/libs
+
+#COPY --from=or-tools-build /root/.m2/repository /root/.m2/repository
+
+COPY tripplanning-lib/pom.xml /app/libs/pom.xml
+
+#WORKDIR /app/libs/
+
+ENV MVN1="mvn -f /app/libs/pom.xml"
+
+RUN $MVN1 --version
+
+RUN $MVN1 dependency:go-offline
+
+#ENV PATH="/usr/local/google-or-tools/lib:${PATH}"
+
+RUN ls -a
+
+#CMD ["/bin/bash"]
+
+COPY tripplanning-lib/src /app/libs/src
+
+RUN $MVN1 clean install -DskipTests
+
+#-------------------------------------------------------------
+RUN mkdir -p /app/service
+
+#COPY --from=or-tools-build /root/.m2/repository /root/.m2/repository
+
+COPY tripplanning-worker-service/pom.xml /app/service/pom.xml
+
+#WORKDIR /app/service/
+
+ENV MVN2="mvn -f /app/service/pom.xml"
+
+RUN $MVN2 --version
+
+#COPY --from=lib-build /root/.m2/repository/com/flashex /root/.m2/repository/com/flashex
+
+RUN $MVN2 dependency:go-offline
+
+COPY tripplanning-worker-service/src /app/service/src
+
+RUN $MVN2 clean package -DskipTests
+#------------------------------------------------------------------
+
+RUN curl http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc6_2.29-0ubuntu2_amd64.deb --output libc6_2.29-0ubuntu2_amd64.deb
+
+RUN dpkg -i libc6_2.29-0ubuntu2_amd64.deb
+
+ENV PATH "$PATH:/usr/local/google-or-tools/lib"
+
+RUN ls -la /usr/local/google-or-tools
+
+RUN mkdir -p /usr/lib/google-or-lib
+
+COPY google-or-tools-lib/or-tools_Ubuntu-18.04-64bit_v7.4.7247/lib /usr/lib
+
+CMD ["/bin/bash"]
+
+COPY --from=waitfor ./wait-for ./wait-for
+
+EXPOSE 5020
+
+WORKDIR /app/service/target
+
+#ENTRYPOINT [ "./wait-for", "config-server:8888", "-t", "20", "--", "java", "-jar", "app/service/target/*.jar"]
+
+ENTRYPOINT ["java", "-jar", "tripplanning-microservice-worker-service-0.0.1-SNAPSHOT.jar"]

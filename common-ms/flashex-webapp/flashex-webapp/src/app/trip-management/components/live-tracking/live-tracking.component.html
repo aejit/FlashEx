@@ -1,0 +1,83 @@
+<body style="background-color:#ECEFF1;height: 90%;">
+    <mat-toolbar class="example-toolbar" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>
+            <button style="margin: 0px;" mat-icon-button (click)="sidenav.toggle()">                       <mat-icon>double_arrow</mat-icon>
+            </button> Scheduled Trips:
+            <span style="padding-left:0.5em;font-size:0.85em;"> 
+                {{scheduledDate | date:'mediumDate'}}
+            </span>
+
+        </div>
+        <mat-radio-group style="margin-left:auto;font-weight: normal;" aria-label="Select an option" fxLayout="row" fxLayoutAlign="space-between center">
+            <mat-radio-button value="1" routerLink="/admin/triptrack" [checked]="true"><span title="tomtom map platform" style="font-size:0.85em;padding-right:0.5em;height: 0.4em;width: 0.4em;">TomTom</span></mat-radio-button>
+            <mat-radio-button value="2" routerLink="/admin/trackgoogle"><span title="google map platform" style="font-size:0.85em;height: 0.4em;width: 0.4em;">Google</span>
+            </mat-radio-button>
+        </mat-radio-group>
+
+
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-container" style="background-color:#ECEFF1;">
+
+        <mat-sidenav class="sidenavbar" #sidenav opened mode="side" style="background-color:#ECEFF1;">
+
+            <div *ngFor="let id of dataSource, let i=index">
+                <mat-expansion-panel style="background-color:#ECEFF1;" style="width: 100%;">
+
+                    <mat-expansion-panel-header style="background-color:#ECEFF1;">
+                        <mat-panel-title>
+                            <p style="border-style: solid;border-width: 0 0 0 0.6em;background-color: #ECEFF1; padding-left: 0.4em;font-size:1rem;" [ngStyle]="{'border-color': colors[i]}">
+                                {{tripDate | slice: 0:3 | uppercase}}{{id.tripItineraryId | slice:-6}}</p>
+                            <br>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <hr>
+                    <p> <span style="color: #A7A7A7;">Planned Trip Start :</span> {{id.plannedStartTime | date:'medium'}}</p>
+                    <p> <span style="color: #A7A7A7;">Actual Trip Started :</span> {{id.tripStart | date:'medium'}}</p><br>
+                    <hr>
+
+
+                    <table mat-table [dataSource]="id.packetLogs">
+
+                        <ng-container matColumnDef="orderId">
+                            <th mat-header-cell fxFlex="150px" *matHeaderCellDef style="padding-top: 1em; font-size: 1.25em; text-align: center;"> Order Id </th>
+                            <td mat-cell fxFlex="150px" *matCellDef="let element" style="padding-top: 1em;text-align: center;"> {{element.packetId | slice: -6 | uppercase}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="status">
+                            <th mat-header-cell fxFlex="150px" *matHeaderCellDef style="padding-top: 1em; font-size: 1.25em;text-align: center;"> Order Status </th>
+                            <td mat-cell fxFlex="150px " *matCellDef="let element " style="padding-top: 1em;text-align: center;">
+                                <div *ngIf="element.packetStatus === 'Delivered'" style="color: green;">{{element.packetStatus}}
+                                </div>
+                                <div *ngIf="element.packetStatus === 'Undelivered'" style="color:red;">{{element.packetStatus}}
+                                </div>
+                                <div *ngIf="element.packetStatus === 'Dispatached'" style="color:black;">{{element.packetStatus}}
+                                </div>
+                            </td>
+
+                        </ng-container>
+
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns "></tr>
+                        <tr mat-row *matRowDef="let row; let even = even; columns: displayedColumns; " [ngClass]="{gray: even}"></tr>
+                    </table>
+
+
+                    <hr>
+
+                    <p> <span style="color: #A7A7A7;">Planned Trip End :</span> {{id.plannedEndTime | date:'medium'}}</p>
+
+                    <p> <span style="color: #A7A7A7;">Actual Trip Ended :</span> {{id.tripEnd | date:'medium'}}</p>
+
+                    <hr>
+
+                </mat-expansion-panel>
+            </div>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <div id="map"></div>
+
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</body>

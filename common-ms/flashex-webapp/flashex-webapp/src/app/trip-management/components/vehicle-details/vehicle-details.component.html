@@ -1,0 +1,37 @@
+<div class="container">
+
+    <mat-toolbar>Vehicles List</mat-toolbar>
+    <div class="vehicle-card-container" fxLayout="row wrap">
+        <mat-card class="vehicle-card" *ngFor='let vehicle of vehicleDataSource; let i = index'>
+            <mat-card-header style="background-color: gainsboro;">
+                <div mat-card-avatar class="vehicle-header-image ">
+                    <mat-icon style="margin-left:0.3em; margin-top: 0.3em;">local_shipping </mat-icon>
+
+                </div>
+
+                <mat-card-title style="margin-left:0.3em; margin-top: 0.3em;color: gray; ">{{vehicle.vehicleType}}</mat-card-title>
+
+            </mat-card-header>
+            <span style="margin-left:0.3em; margin-top: 0.3em;">Id: {{vehicle.vehicleId}}</span>
+            <mat-card-content class="card-contents ">
+                <div class="details-container-flex ">
+                    <div class="detail-container ">
+                        <p class="title-part mat-body-2 ">Capacity :<span style="color:black ">{{vehicle.vehicleVolume}}</span></p>
+                    </div>
+
+                    <div class="detail-container ">
+                        <p class="title-part mat-body-2 ">Availability : <span class="mat-body-1 " style="color: black; " *ngIf='vehicle.availability === true'>YES</span>
+                            <span class="mat-body-1 " *ngIf='vehicle.availability === false' style="color: black; ">NO</span>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="crew-detail-container ">
+                    <p class="title-part mat-body-2 ">Crew:<span style="color: black; " class="mat-body-1 ">{{vehicle.vehicleCrew}}</span>
+                    </p>
+
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

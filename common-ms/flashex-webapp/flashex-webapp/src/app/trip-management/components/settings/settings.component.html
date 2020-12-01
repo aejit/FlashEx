@@ -1,0 +1,124 @@
+<div class="container" *ngIf="shipmentConfig">
+  <h1 mat-dialog-title color="primary">
+    Configurations
+  </h1>
+  <mat-card class="matcard">
+    <mat-card-content>
+      <mat-card-subtitle>
+        <mat-icon> category</mat-icon> <span class="align">Order Segregation</span>
+      </mat-card-subtitle>
+      <table>
+
+        <tr fxLayout="row" fxLayoutAlign="space-around center">
+          <td> Group by Pincode </td>
+          <td>
+            <mat-slide-toggle class="example-margin" [color]="color" [checked]="pincodeChecked"
+              (change)="togglePincode($event)">
+            </mat-slide-toggle>
+          </td>
+        </tr>
+
+        <tr fxLayout="row" fxLayoutAlign="space-around center">
+          <td> Group by Order Type </td>
+          <td>
+            <mat-slide-toggle class="example-margin" [color]="color" [checked]="orderTypeChecked"
+              (change)="toggleType($event)">
+            </mat-slide-toggle>
+          </td>
+        </tr>
+
+        <tr fxLayout="row" fxLayoutAlign="space-around center">
+          <td> Group by Size </td>
+          <td>
+            <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked" [disabled]="true"
+              (change)="toggleVolume($event)">
+            </mat-slide-toggle>
+          </td>
+        </tr>
+
+        <tr fxLayout="row" fxLayoutAlign="space-around center">
+          <td> Priority Delivery</td>
+          <td>
+            <mat-slide-toggle class="example-margin" [color]="color" [checked]="priorityChecked" [disabled]="false"
+              (change)="togglePriority($event)">
+            </mat-slide-toggle>
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+
+    <mat-card-content>
+      <table>
+        <tr fxLayout="row" fxLayoutAlign="space-around center">
+          <td>
+            Maximum Units in Shipment <span title="This cannot exceed 15 for Google Distance Matrix"><mat-icon color="primary">info</mat-icon></span>
+          </td>
+          <td>
+            <mat-slider class="example-margin" [disabled]="false" [invert]="false" [max]="max" [min]="min"
+              [step]="steps" [thumbLabel]="thumbLabel" [tickInterval]="tickInterval" [(ngModel)]="maxShipmentSize">
+            </mat-slider>
+          </td>
+        </tr>
+        <tr fxLayout="row" fxLayoutAlign="space-around center" *ngIf="priorityChecked">
+          <td>
+            Priority Factor
+            <button mat-icon-button color="primary" aria-label="information icon">
+                <span title="Controls processing time. A value of 1.0 is equivalent to an Ordinary order">
+                  <mat-icon>info</mat-icon>
+                </span>
+              </button>
+          </td>
+          <td>
+            <mat-slider class="example-margin" [invert]="false" [max]="maxRelaxation" [min]="minRelaxation"
+              [step]="stepsRelax" [thumbLabel]="thumbLabel" [tickInterval]="tickIntervalRelax" [(ngModel)]="relaxation">
+            </mat-slider>
+          </td>
+        </tr>
+
+      </table>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content>
+      <mat-card-subtitle>
+        <mat-icon> my_location</mat-icon> <span class="align">Warehouse Location</span>
+      </mat-card-subtitle>
+      <form [formGroup]="originAddress" (ngSubmit)="onSubmit()">
+        <mat-form-field class="form-field" fxLayoutAlign="center center" >
+          <input matInput placeholder="Street" formControlName="addressLine1">
+        </mat-form-field>
+
+        <mat-form-field class="form-field" fxLayoutAlign="center center" >
+          <input matInput placeholder="City" formControlName="city">
+        </mat-form-field>
+
+        <mat-form-field class="form-field" fxLayoutAlign="center center" >
+          <input matInput placeholder="State" formControlName="state">
+        </mat-form-field>
+
+
+        <mat-form-field class="form-field" fxLayoutAlign="center center">
+          <input matInput placeholder="Pincode" formControlName="pincode">
+        </mat-form-field>
+
+
+        <mat-form-field class="form-field" fxLayoutAlign="center center">
+          <input matInput placeholder="Latitude" formControlName="latitude">
+        </mat-form-field>
+
+
+        <mat-form-field class="form-field"  fxLayoutAlign="center center">
+          <input matInput placeholder="Longitude" formControlName="longitude">
+        </mat-form-field>
+      </form>
+
+    </mat-card-content>
+
+  </mat-card>
+  <mat-card-actions fxLayoutAlign="center center">
+    <button type="submit" mat-raised-button color="primary" [disabled]="changeOfConfig" (click)="onSubmit()">
+      Save
+    </button>
+    <button mat-raised-button color="accent" (click)="close()"> Cancel </button>
+  </mat-card-actions>
+</div>

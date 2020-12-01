@@ -1,0 +1,121 @@
+<mat-toolbar color="primary">
+    <img style="margin-right:auto" src="../assets/images/logo.png" routerLink='/user'>
+    <div>
+        <span style="font-size: small;">{{userName | uppercase | slice:0:-3}}</span>
+        <button style="margin-left: auto;" mat-button [matMenuTriggerFor]="menu">
+                    <mat-icon class="logout" mat-list-icon>person </mat-icon>
+                </button>
+        <mat-menu #menu="matMenu" color="accent">
+            <div fxLayout="column" fxLayoutAlign="space-evenly center">
+                <div>
+                    <p style="padding: 5px;">{{role}}</p>
+                </div>
+                <div>
+                    <span>
+                    <button mat-stroked-button (click)="logout()">Logout</button>
+                   </span>
+                </div>
+            </div>
+        </mat-menu>
+    </div>
+
+</mat-toolbar>
+<mat-toolbar>
+  <h1>Trip Details</h1>
+  <p style="margin-left: auto; font-size: 0.85em;">{{scheduledDate| date:'mediumDate'}}</p>
+</mat-toolbar>
+<mat-tab-group dynamicHeight>
+    <mat-tab *ngFor="let tripDetail of dataSource" style="width: 100%;" label="Trip ID :
+    {{tripDate | slice: 0:3 | uppercase}}{{tripDetail.tripItineraryId | slice:-6}}">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <div style="width: 100%;">
+                <mat-list>
+                    <mat-list-item>
+                        <span style="color:gray; font-size: 1em; ">Start Time:</span>
+                        <span style="margin: auto;">{{tripDetails.plannedStartTime|date: 'shortTime'}}</span>
+
+                        <p style="margin-left: auto;"> <button mat-flat-button color="primary" onclick="this.disabled=true" (click)="updateTripStart(tripDetails, tripDetails.tripItineraryId); startSnackBar()" [disabled]="start">Start Trip</button></p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <div *ngIf="start">
+                      <mat-list-item>
+                        <span style="color:gray; font-size: 1em; "> Actual Start Time:</span>
+                        <span style="margin: auto;">{{tripDetails.tripStart | date: 'shortTime'}}</span>
+                      </mat-list-item>
+                      <mat-divider></mat-divider>
+                    </div>
+                </mat-list>
+
+
+                <mat-accordion>
+                    <mat-expansion-panel *ngFor="let listofOrders of tripDetail.packetLogs" hideToggle>
+                        <mat-expansion-panel-header>
+                            <div fxLayout="row" fxLayoutAlign="space-between center">
+                                <mat-panel-title>
+                                    <span>
+                                        <span style="color:gray; font-size: .9em;">ID: </span>
+                                    <span matTooltip="{{listofOrders.packetId}}">{{listofOrders.packetId | slice: -6 | uppercase}}</span>
+                                    </span>
+                                </mat-panel-title>
+                                <mat-panel-description>
+
+                                    <span style="margin-left: auto;"><mat-icon style="font-size: medium;">account_circle</mat-icon></span>
+                                    <span> {{listofOrders.customerName}}</span>
+                                </mat-panel-description>
+
+                            </div>
+                        </mat-expansion-panel-header>
+                        <div fxLayout="row" fxLayoutAlign="space-between end">
+                            <div>
+                                <p>
+                                    <span><mat-icon style="font-size: medium; color:gray;">phone</mat-icon></span>
+                                    <span>{{listofOrders.phoneNumber}}</span>
+                                </p>
+                                <span style="width: 50%; padding-left: 0ex;">
+                                        <p>{{listofOrders.deliveryAddress.addressLine1}}</p>
+                                            <p>{{listofOrders.deliveryAddress.city}}</p>
+
+                                </span>
+                            </div>
+                            <div>
+                                <span style="margin-left: auto;">
+                                    <button mat-raised-button  (click)= "updatePacketLog(tripDetails.tripItineraryId, listofOrders.packetId)" color="primary" onclick="this.disabled=true">Delivered</button>
+                                </span>
+                            </div>
+                            <div>
+                                <span style="margin-left: auto;">
+
+                                <button mat-raised-button (click)="updatePacketUndelivered(tripDetails.tripItineraryId, listofOrders.packetId)" color="primary" onclick="this.disabled=true" style="margin-left: 0.3em;">Not Delivered</button>
+                                </span>
+
+                            </div>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+                <mat-list>
+                    <mat-list-item>
+                        <span style="color:gray; font-size: 1em; ">End Time:</span>
+                        <span style="margin: auto;">{{tripDetails.plannedEndTime|date:'shortTime'}}</span>
+                        <p style="margin-left: auto;"> <button mat-flat-button color="primary" onclick="this.disabled=true" (click)="updateTripEnd(tripDetails,tripDetails.tripItineraryId); openSnackBar()" [disabled]="end">End Trip</button></p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <div *ngIf="end">
+                      <mat-list-item>
+                        <span style="color:gray; font-size: 1em; "> Actual End Time:</span>
+                        <span style="margin: auto;">{{tripDetails.tripEnd | date: 'shortTime'}}</span>
+                      </mat-list-item>
+                      <mat-divider></mat-divider>
+                    </div>
+                    <mat-list-item>
+                        <span matTooltip="TomTom Map" style="margin-right: auto;" (click)="loadMap()"><mat-icon>directions</mat-icon></span>
+                        <span style="margin-left: auto;"><a href='https://www.google.com/maps'><img matTooltip="Google Map" class="google" src="../../../../assets/images/google.png" ></a></span>
+
+                    </mat-list-item>
+                </mat-list>
+
+            </div>
+
+        </div>
+    </mat-tab>
+</mat-tab-group>
+<div *ngIf="lMap" id="map" style="margin-left: 0.5em; margin-bottom: 2em;margin-right: 0.5em;"></div>

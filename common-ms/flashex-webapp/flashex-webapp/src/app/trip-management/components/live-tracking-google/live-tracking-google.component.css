@@ -1,0 +1,17 @@
+agm-map {
+    height: 80%;
+}
+
+button {
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-right: 1em;
+}
+
+.example-container {
+    height: 31em;
+}
+
+.sidenavbar {
+    width: min-content;
+}

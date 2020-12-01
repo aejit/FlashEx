@@ -1,0 +1,14 @@
+img {
+    width: 8.5rem;
+    height: 3.5rem;
+    display: block;
+    cursor: pointer;
+    outline: 0;
+}
+
+mat-toolbar {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    height: 10vh;
+}
